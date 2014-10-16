@@ -1,0 +1,88 @@
+public class LinkedList {
+
+	private Node head;
+    private int listCount;
+    
+    public LinkedList() {
+        head = new Node(null);
+        listCount = 0;
+    }
+ 
+    public void add(Object data)
+    {
+        Node node = new Node(data);
+        Node currentNode = head;
+        if(currentNode.getData() == null){
+        	head = node;
+        }else{
+	        while (currentNode.getNext() != null) {
+	            currentNode = currentNode.getNext();
+	        }
+	        currentNode.setNext(node);
+        }
+        listCount++;
+    }
+ 
+    public void add(Object data, int index)
+    {
+        Node node = new Node(data);
+        Node currentNode = head;
+        for (int i = 1; i < index && currentNode.getNext() != null; i++) {
+            currentNode = currentNode.getNext();
+        }
+        node.setNext(currentNode.getNext());
+        currentNode.setNext(node);
+        listCount++;
+    }
+ 
+    public Object get(int index)
+    {
+        if (index <= 0)
+            return null;
+ 
+        Node currentNode = head.getNext();
+        for (int i = 1; i < index; i++) {
+            if (currentNode.getNext() == null)
+                return null;
+ 
+            currentNode = currentNode.getNext();
+        }
+        return currentNode.getData();
+    }
+ 
+    public Node getHead(){
+    	return head;
+    }
+    
+    public boolean remove(int index)
+    {
+        if (index < 1 || index > size())
+            return false;
+ 
+        Node currentNode = head;
+        for (int i = 1; i < index; i++) {
+            if (currentNode.getNext() == null)
+                return false;
+ 
+            currentNode = currentNode.getNext();
+        }
+        currentNode.setNext(currentNode.getNext().getNext());
+        listCount--;
+        return true;
+    }
+ 
+    public int size()
+    {
+        return listCount;
+    }
+ 
+    public String toString() {
+        Node currentNode = head.getNext();
+        String output = "";
+        while (currentNode != null) {
+            output += "[" + currentNode.getData().toString() + "]";
+            currentNode = currentNode.getNext();
+        }
+        return output;
+    }
+}

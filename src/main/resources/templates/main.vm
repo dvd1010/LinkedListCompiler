@@ -1,0 +1,18 @@
+package com.devanshu.linkedlist;
+
+public class Main {
+
+	public static void main(String[] args){
+	
+		Solution solution = new Solution();
+		LinkedList linkedList = new LinkedList();
+		Object[] arr = new Object []{%s}; 
+		int size = %t;
+		
+		for(int i = 0; i < size; i++){
+			linkedList.add(arr[i]);
+		}
+		Node middleNode = solution.findMiddle(linkedList);
+		System.out.println("Middle Node is the one with value: " +middleNode.getData());
+	}
+}

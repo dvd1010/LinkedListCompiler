@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="@frame" template="/WEB-INF/views/shared/rr_layout.jsp">
+		<put-attribute name="page-title" value="" />
+		<put-attribute name="page-head" value="" />
+		<put-attribute name="page-info" value="" />
+		<put-attribute name="page-body" value="" />
+		<put-attribute name="page-footer" value="" />
+	</definition>
+
+<!-- 	<definition name="@registration" extends="@frame">
+        <put-attribute name="page-title" value="Register yourself for the assessment" />
+        <put-attribute name="page-head" value="/WEB-INF/views/reg/head.jsp" />
+        <put-attribute name="page-info" value="" />
+        <put-attribute name="page-body" value="/WEB-INF/views/reg/body.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/views/shared/footer.jsp" />
+	</definition>
+
+    <definition name="@instructions" extends="@frame">
+        <put-attribute name="page-title" value="Read instructions before starting your test" />
+        <put-attribute name="page-body" value="/WEB-INF/views/instruction/body.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/views/shared/footer.jsp" />
+    </definition>
+
+    <definition name="@test-window" extends="@frame">
+        <put-attribute name="page-title" value="Test Window" />
+        <put-attribute name="page-head" value="/WEB-INF/views/rr/head.jsp" />
+        <put-attribute name="page-info" value="/WEB-INF/views/rr/info.jsp" />
+        <put-attribute name="page-body" value="/WEB-INF/views/rr/body.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/views/rr/footer.jsp" />
+    </definition> -->
+
+</tiles-definitions>

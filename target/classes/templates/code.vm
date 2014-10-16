@@ -1,0 +1,26 @@
+
+public class Solution {
+
+	public Node findMiddle(LinkedList linkedList){
+		
+		Node ptr1 = linkedList.getHead();
+		Node ptr2 = linkedList.getHead();
+		
+		int i = 0;
+		
+		while(ptr1.getNext() != null){
+			
+			if(i == 0){
+				ptr1 = ptr1.getNext();
+				i = 1;
+			}
+			else if(i == 1){
+				ptr1 = ptr1.getNext();
+				ptr2 = ptr2.getNext();
+				i = 0;
+			}
+		}
+		return ptr2;
+	}
+	
+}
